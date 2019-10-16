@@ -12,7 +12,7 @@ And then in the usual  *.cs :
     public class TheData : IOfTheData
 
 
-But I don't know wheather to use 
+But I don't know whether to use 
     Task<IReadOnlyList<Country>>
 or
     IEnumerable<Country> All()
@@ -24,21 +24,24 @@ The FetchData.razor is instructive
         forecasts = await Http.GetJsonAsync<WeatherForecast[]>("sample-data/weather.json");
     }
     
-And forcast is just array 'WeatherForecast[]' of a usual (data) class.
+And 'forecasts' is just array 'WeatherForecast[]' of a normal class.
 
-**In short
+*In short
 
 I don't know what does Blazor expec to see in the @code section?
+
 I have found overrides:
 
   
-  OnAfterRender(bool firstRender)
-  OnAfterRenderAsync(bool firstRender)
-  OnInitialized()
-  OnInitializedAsync()
-  OnParametersSet()
-  OnParametersSetAsync()
-  ShouldRender()
+    OnAfterRender(bool firstRender)
+    OnAfterRenderAsync(bool firstRender)
+    OnInitialized()
+    OnInitializedAsync()
+    OnParametersSet()
+    OnParametersSetAsync()
+    ShouldRender()
+    
+    
   
   
   
